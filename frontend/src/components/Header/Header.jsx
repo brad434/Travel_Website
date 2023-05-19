@@ -43,6 +43,7 @@ const Header = () => {
                     </div>
                     {/* ======= Menu End========= */}
 
+                    {/* ======= Login & Register Button START ========= */}
                     <div className="nav__right d-flex align-items-center gap-4 p-4">
                         <div className="nav__btns d-flex align-items-center gap-4">
                             <Button className="btn secondary__btn"><Link to='/login'>Login</Link></Button>
@@ -52,6 +53,7 @@ const Header = () => {
                             <i class="ri-menu-line"></i>
                         </span>
                     </div>
+                    {/* ======= Login & Register Button END========= */}
                 </div>
             </Row>
         </Container>
