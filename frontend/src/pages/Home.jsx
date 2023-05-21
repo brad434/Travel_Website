@@ -8,10 +8,12 @@ import heroImg02 from '../assets/images/hero-img02.jpg'
 import heroVideo from '../assets/images/hero-video.mp4'
 import Subtitle from '../Shared/Subtitle'
 import worldImg from './../assets/images/world.png'
+import experienceImg from './../assets/images/experience.png'
 
 import SearchBar from '../Shared/SearchBar';
 import ServiceList from '../services/ServiceList';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
+import MasonryImagesGallery from '../components/image-gallery/MasonryImagesGallery';
 
 
 const Home = () => {
@@ -100,31 +102,51 @@ const Home = () => {
                             <div className="counter__wrapper d-flex align-items-center gap-5">
                                 <div className="counter__box">
                                     <span>12k+</span>
-                                    <h6>Successful Trip</h6>
+                                    <h6>Successful trip</h6>
                                 </div>
                                 <div className="counter__box">
                                     <span>2k+</span>
-                                    <h6>Regular Clients</h6>
+                                    <h6>Regular clients</h6>
                                 </div>
                                 <div className="counter__box">
-                                    <span>12k+</span>
-                                    <h6>Successful Trip</h6>
+                                    <span>15</span>
+                                    <h6>Years experience</h6>
                                 </div>
                             </div>
                         </Col>
-                        <Col lg='6'></Col>
+                        <Col lg='6'>
+                            <div className="experience__img">
+                                <img src={experienceImg} alt="" />
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            {/* ================== EXPERIENCE SECTION END ====================== */}
+
+
+            {/* ================== GALLERY SECTION START ====================== */}
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg='12'>
+                            <Subtitle subtitle={'Gallery'} />
+                            <h2 className="gallery__title">Visit our customer tour gallery</h2>
+                        </Col>
+                        <Col lg='12'>
+                            <MasonryImagesGallery />
+                        </Col>
                     </Row>
                 </Container>
             </section>
 
 
-
-            {/* ================== EXPERIENCE SECTION END ====================== */}
+            {/* ================== GALLERY SECTION END ====================== */}
 
 
 
         </>
     )
-}
+};
 
-export default Home
+export default Home;
