@@ -69,17 +69,60 @@ const Home = () => {
             {/* ================== Featured Tour Section START ====================== */}
 
             <section>
-                <Row>
-                    <Col lg='12' className='mb-5'>
-                        <Subtitle subtitle={'Explore'} />
-                        <h2 className='featured__tour-title'>Our featured tours</h2>
-                    </Col>
-                    <FeaturedTourList />
-                </Row>
+                <Container>
+                    <Row>
+                        <Col lg='12' className='mb-5'>
+                            <Subtitle subtitle={'Explore'} />
+                            <h2 className='featured__tour-title'>Our featured tours</h2>
+                        </Col>
+                        <FeaturedTourList />
+                    </Row>
+                </Container>
+            </section>
+            {/* ================== Featured Tour Section END ====================== */}
+
+            {/* ================== EXPERIENCE SECTION START ====================== */}
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg='6'>
+                            <div className="experience__content">
+                                <Subtitle subtitle={"Experience"} />
+                                <h2>
+                                    With our all experience <br />we will serve you
+                                </h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    <br />Culpa sapiente adipisci voluptates eius, corporis doloribus.
+                                </p>
+                            </div>
+
+                            <div className="counter__wrapper d-flex align-items-center gap-5">
+                                <div className="counter__box">
+                                    <span>12k+</span>
+                                    <h6>Successful Trip</h6>
+                                </div>
+                                <div className="counter__box">
+                                    <span>2k+</span>
+                                    <h6>Regular Clients</h6>
+                                </div>
+                                <div className="counter__box">
+                                    <span>12k+</span>
+                                    <h6>Successful Trip</h6>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg='6'></Col>
+                    </Row>
+                </Container>
             </section>
 
 
-            {/* ================== Featured Tour Section END ====================== */}
+
+            {/* ================== EXPERIENCE SECTION END ====================== */}
+
+
+
         </>
     )
 }
