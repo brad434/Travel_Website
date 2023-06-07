@@ -12,7 +12,7 @@ const SearchBar = () => {
     const maxGroupSizeRef = useRef(0);
     const navigate = useNavigate()
 
-    // This function from line 12-20 is used for making the user input a value on each input but cannot pass
+    // This function from line 12-20 is used for making the user input a value on each input but cannot p ass
     const searchHandler = async () => {
         const location = locationRef.current.value;
         const distance = distanceRef.current.value;
@@ -28,7 +28,7 @@ const SearchBar = () => {
 
         const result = await res.json();
 
-        navigate(`/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`, { state: result.data });
+        navigate(`/tours/search/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`, { state: result.data });
     }
     return <Col lg='12'>
         <div className="search__bar">
