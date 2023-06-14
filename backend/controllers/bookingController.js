@@ -13,7 +13,7 @@ export const createBooking = async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({
-      success: false,
+      success: true,
       message: "Your tour was unable to be booked. Try again.",
     });
   }
@@ -26,9 +26,9 @@ export const getBooking = async (req, res) => {
   try {
     const book = await Booking.findById(id);
 
-    res.status(202).json({ success: true, message: "successful", data: book });
+    res.status(200).json({ success: true, message: "successful", data: book });
   } catch (err) {
-    res.status(404).json({ success: false, message: "not found" });
+    res.status(404).json({ success: true, message: "not found" });
   }
 };
 
@@ -37,8 +37,8 @@ export const getAllBooking = async (req, res) => {
   try {
     const books = await Booking.find();
 
-    res.status(202).json({ success: true, message: "successful", data: books });
+    res.status(200).json({ success: true, message: "successful", data: books });
   } catch (err) {
-    res.status(500).json({ success: false, message: "internal server error" });
+    res.status(500).json({ success: true, message: "internal server error" });
   }
 };

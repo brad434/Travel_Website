@@ -29,7 +29,7 @@ const Home = () => {
                             <div className="hero__content">
                                 <div className="hero__subtitle d-flex align-item-center">
                                     <Subtitle subtitle={'Know Before You Go'} />
-                                    <img src={worldImg} alt="" srcset="" />
+                                    <img src={worldImg} alt="" srcSet="" />
                                 </div>
                                 <h1>Traveling opens the door to creating
                                     <span className='highlight'> memories</span>

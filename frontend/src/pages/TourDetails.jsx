@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { Children, useRef, useState } from 'react'
 import '../styles/tour-details.css'
 import { Container, Row, Col, Form, ListGroup, Alert } from 'reactstrap'
 import { useParams } from 'react-router-dom'
@@ -77,11 +77,11 @@ const TourDetails = () => {
 
                                     <Form onSubmit={submitHandler}>
                                         <div className="d-flex align-items-center gap-3 mb-4 rating__group">
-                                            <span onClick={() => setTourRating(1)}>1 <i class="ri-star-s-fill"></i></span>
-                                            <span onClick={() => setTourRating(2)}>2 <i class="ri-star-s-fill"></i></span>
-                                            <span onClick={() => setTourRating(3)}>3 <i class="ri-star-s-fill"></i></span>
-                                            <span onClick={() => setTourRating(4)}>4 <i class="ri-star-s-fill"></i></span>
-                                            <span onClick={() => setTourRating(5)}>5 <i class="ri-star-s-fill"></i></span>
+                                            <span onClick={() => setTourRating(1)}>1 <i className="ri-star-s-fill"></i></span>
+                                            <span onClick={() => setTourRating(2)}>2 <i className="ri-star-s-fill"></i></span>
+                                            <span onClick={() => setTourRating(3)}>3 <i className="ri-star-s-fill"></i></span>
+                                            <span onClick={() => setTourRating(4)}>4 <i className="ri-star-s-fill"></i></span>
+                                            <span onClick={() => setTourRating(5)}>5 <i className="ri-star-s-fill"></i></span>
                                         </div>
 
                                         <div className="review__input">
@@ -92,7 +92,7 @@ const TourDetails = () => {
                                         </div>
                                     </Form>
                                     <ListGroup className='user__reviews'>
-                                        {reviews?.map((review, index) => (
+                                        {reviews?.map(review => (
                                             <div className="review__item">
                                                 <img src={avatar} alt="" />
 
