@@ -22,16 +22,20 @@ const SearchBar = () => {
             return alert("All fields are imported!")
         }
 
-        const res = await fetch(`${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`);
+        try {
 
-        if (!res.ok) {
+            const res = await fetch(`${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`);
 
-            alert("Something went wrong")
+            if (!res.ok) {
+                alert("Something went wrong")
+            }
+
+            const result = await res.json();
+
+            navigate(`/tours/search/getToursBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`, { state: result.data, });
+        } catch (err) {
+            console.error(err)
         }
-
-        const result = await res.json();
-
-        navigate(`/tours/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`, { state: result.data });
     };
 
     return (

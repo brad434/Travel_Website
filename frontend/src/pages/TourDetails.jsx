@@ -10,14 +10,14 @@ import Newsletter from '../Shared/Newsletter';
 
 const TourDetails = () => {
 
-    const { id } = useParams()
+    const { _id } = useParams()
 
     const reviewMsgRef = useRef('')
 
     const [tourRating, setTourRating] = useState(null)
 
     //this is a static data , later we will call our API  and load our data from database
-    const tour = tourData.find(tour => tour.id === id)
+    const tour = tourData.find(tour => tour._id === _id)
 
     // destructure properties from tour object
     const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } = tour

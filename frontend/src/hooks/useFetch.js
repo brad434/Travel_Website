@@ -13,11 +13,10 @@ const useFetch = url => {
 
         if (!res.ok) {
           setError("failed to fetch");
-          alert("failed to fetch");
+          console.log(res);
         }
 
         const result = await res.json();
-
         setData(result.data);
         setLoading(false);
       } catch (err) {
