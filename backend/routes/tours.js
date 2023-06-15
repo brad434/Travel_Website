@@ -24,9 +24,9 @@ router.get("/:id", getSingleTour);
 // getAll tour
 router.get("/", getAllTour);
 // get tour by search
-router.get("/tours/search/getToursBySearch", getTourBySearch);
+router.get("/search/getToursBySearch", getTourBySearch);
 // get featured tour
-router.get("/tours/search/getFeaturedTours", getFeaturedTours);
+router.get("/search/getFeaturedTours", getFeaturedTours);
 //get the amount of tours available
 router.get("/search/getTourCount", getTourCount);
 
