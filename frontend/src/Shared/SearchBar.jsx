@@ -7,9 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
 
-    const locationRef = useRef(null);
-    const distanceRef = useRef(null);
-    const maxGroupSizeRef = useRef(null);
+    const locationRef = useRef("");
+    const distanceRef = useRef(0);
+    const maxGroupSizeRef = useRef(0);
     const navigate = useNavigate()
 
     // This function from line 12-20 is used for making the user input a value on each input but cannot p ass
@@ -25,8 +25,6 @@ const SearchBar = () => {
         try {
 
             const res = await fetch(`${BASE_URL}/tours/search/getToursBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`);
-            const url1 = `${BASE_URL}/tours/search/getToursBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`;
-            console.log(url1)
 
             if (!res.ok) {
                 alert("Something went wrong")
