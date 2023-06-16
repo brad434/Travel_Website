@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CommonSection from '../Shared/CommonSection'
 import '../styles/tour.css'
-// import tourDate from '../assets/data/tours'
+
 import TourCard from '../Shared/TourCard'
 import SearchBar from '../Shared/SearchBar'
 import Newsletter from '../Shared/Newsletter'
@@ -21,7 +21,8 @@ const Tours = () => {
     useEffect(() => {
         const pages = Math.ceil(tourCount / 8) // later we will use backend data count (also this is for the page 1 and page 2 display in tour frontend)
         setPageCount(pages)
-    }, [page, tourCount]);
+        window.scrollTo(0, 0)
+    }, [page, tourCount, tours]);
 
     return (
         <>
