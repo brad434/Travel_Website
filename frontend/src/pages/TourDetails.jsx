@@ -1,4 +1,4 @@
-import React, { Children, useRef, useState } from 'react'
+import React, { Children, useEffect, useRef, useState } from 'react'
 import '../styles/tour-details.css'
 import { Container, Row, Col, Form, ListGroup, Alert } from 'reactstrap'
 import { useParams } from 'react-router-dom'
@@ -21,10 +21,10 @@ const TourDetails = () => {
 
     //fetch data from database
     // const tour = tourData.find(tour => tour._id === _id)
-    const { data: tour } = useFetch(`${BASE_URL}/tour/${id}`);
+    const { data: tour } = useFetch(`${BASE_URL}/tours/${_id}`);
 
     // destructure properties from tour object
-    const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } = tour
+    const { photo, title, desc, price, address, reviews, city, distance, maxGroupSize } = tour;
 
     const { totalRating, avgRating } = calculateAvgRating(reviews)
 
@@ -42,6 +42,9 @@ const TourDetails = () => {
         //later we will call our api
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <>
