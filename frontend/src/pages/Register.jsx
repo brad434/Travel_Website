@@ -11,9 +11,9 @@ import { BASE_URL } from '../utils/config'
 
 const Register = () => {
     const [credentials, setCredentials] = useState({
-        userName: undefined,
-        email: undefined,
-        password: undefined
+        userName: '',
+        email: '',
+        password: '',
     });
 
     const { dispatch } = useContext(AuthContext);
@@ -62,13 +62,13 @@ const Register = () => {
 
                                 <Form onSubmit={handleClick}>
                                     <FormGroup>
-                                        <input type="text" placeholder="Username" required id='username' onChange={handleChange} />
+                                        <input type="text" placeholder="Username" required id='userName' value={credentials.userName} onChange={handleChange} />
                                     </FormGroup>
                                     <FormGroup>
-                                        <input type="text" placeholder="Email" required id='email' onChange={handleChange} />
+                                        <input type="text" placeholder="Email" required id='email' value={credentials.email} onChange={handleChange} />
                                     </FormGroup>
                                     <FormGroup>
-                                        <input type="password" placeholder="Password" required id='password' onChange={handleChange} />
+                                        <input type="password" placeholder="Password" required id='password' value={credentials.password} onChange={handleChange} />
                                     </FormGroup>
                                     <Button type="submit" className="btn secondary__btn auth__btn">Create Account</Button>
                                 </Form>
