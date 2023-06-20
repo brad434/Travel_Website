@@ -271,7 +271,7 @@ export const deleteTour = async (req, res) => {
 
 // getSingle tour
 export const getSingleTour = async (req, res) => {
-  const id = req.params._id;
+  const id = req.params.id;
 
   try {
     const tour = await Tour.findById(id).populate("reviews");

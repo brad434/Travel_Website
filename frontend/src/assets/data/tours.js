@@ -31,7 +31,7 @@ const tours = [
     featured: true,
   },
   {
-    id: "02",
+    _id: "02",
     title: "Bali, Indonesia",
     city: "Indonesia",
     distance: 400,
@@ -50,7 +50,7 @@ const tours = [
     featured: true,
   },
   {
-    id: "03",
+    _id: "03",
     title: "Snowy Mountains, Thailand",
     city: "Thailand",
     distance: 500,
@@ -69,7 +69,7 @@ const tours = [
     featured: true,
   },
   {
-    id: "04",
+    _id: "04",
     title: "Beautiful Sunrise, Thailand",
     city: "Thailand",
     distance: 500,
@@ -88,7 +88,7 @@ const tours = [
     featured: true,
   },
   {
-    id: "05",
+    _id: "05",
     title: "Nusa Pendia Bali, Indonesia",
     city: "Indonesia",
     address: "Somewhere",
@@ -107,7 +107,7 @@ const tours = [
     featured: false,
   },
   {
-    id: "06",
+    _id: "06",
     title: "Cherry Blossoms Spring",
     city: "Japan",
     distance: 500,
@@ -126,7 +126,7 @@ const tours = [
     featured: false,
   },
   {
-    id: "07",
+    _id: "07",
     title: "Holmen Lofoten",
     city: "France",
     distance: 500,
@@ -140,7 +140,7 @@ const tours = [
     featured: false,
   },
   {
-    id: "08",
+    _id: "08",
     title: "Snowy Mountains, Thailand",
     city: "Thailand",
     distance: 500,
