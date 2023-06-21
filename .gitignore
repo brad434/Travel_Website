@@ -1,4 +1,6 @@
 */node_modules
+frontend/node_modules
+backend/node_modules
 frontend/node_modules/.cache/default-development/27.pack
 frontend/node_modules/.cache/default-development/9.pack 
 frontend/node_modules/.cache/default-development/2.pack
