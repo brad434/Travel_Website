@@ -34,6 +34,7 @@ const Register = () => {
                 },
                 body: JSON.stringify(credentials)
             })
+
             const result = await res.json()
             if (!res.ok) alert(result.message)
             dispatch({ type: 'REGISTER_SUCCESS' })
