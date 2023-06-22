@@ -9,6 +9,7 @@ import userRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
 import reviewRoute from "./routes/reviews.js";
 import bookingRoute from "./routes/bookings.js";
+import { register } from "./rou";
 
 dotenv.config();
 const app = express();
@@ -28,7 +29,7 @@ mongoose.set("strictQuery", false);
 const connect = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
-      useNewURLParser: true,
+      useNewUrlParser: true,
       useUnifiedTopology: true,
     });
 
@@ -47,6 +48,8 @@ app.use("/tours", tourRoute);
 app.use("/users", userRoute);
 app.use("/review", reviewRoute);
 app.use("/booking", bookingRoute);
+
+app.post("/auth/register", register);
 
 app.listen(port, () => {
   connect();
