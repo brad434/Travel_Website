@@ -30,7 +30,7 @@ const Register = () => {
             const res = await fetch(`${BASE_URL}/auth/register`, {
                 method: 'post',
                 headers: {
-                    'content-type': 'application/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(credentials)
             })
@@ -65,7 +65,7 @@ const Register = () => {
 
                                 <Form onSubmit={handleClick}>
                                     <FormGroup>
-                                        <input type="text" placeholder="Username" required id='userName' value={credentials.username} onChange={handleChange} />
+                                        <input type="text" placeholder="Username" required id='username' value={credentials.username} onChange={handleChange} />
                                     </FormGroup>
                                     <FormGroup>
                                         <input type="text" placeholder="Email" required id='email' value={credentials.email} onChange={handleChange} />
