@@ -10,8 +10,8 @@ import { BASE_URL } from '../utils/config'
 
 const Login = () => {
     const [credentials, setCredentials] = useState({
-        email: undefined,
-        password: undefined
+        email: '',
+        password: '',
     });
 
     const { dispatch } = useContext(AuthContext)
